@@ -8,7 +8,10 @@ end
 
 def list(songs)
   count = 1
-  songs.each {|song| puts "#{count}. #{song}"}
+  songs.each do |song|
+   puts "#{count}. #{song}"
+   count += 1
+ end
 end
 
 def play(songs)
@@ -22,7 +25,6 @@ def play(songs)
   end
   if playing == ""
     puts "Invalid input, please try again"
-    play(songs)
   end
 end
 
